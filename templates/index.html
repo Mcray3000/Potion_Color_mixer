@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Potion Game Color Mixer</title>
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 18px;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 30px; /* Add margin below the main heading */
+        }
+        h2 {
+            font-size: 24px;
+            text-align: center;
+        }
+        label {
+            font-size: 20px;
+            margin-right: 10px; /* Space between label and input/select */
+        }
+        input[type="text"], select {
+            font-size: 20px;
+            padding: 10px;
+            margin: 5px 0;
+            width: 200px; /* Slightly reduced width for side-by-side layout */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            font-size: 20px;
+            padding: 15px 30px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            font-size: 20px;
+            text-align: center;
+        }
+        .color-row {
+            display: flex; /* Enable flexbox for horizontal alignment */
+            align-items: center; /* Vertically align items in the row */
+            margin-bottom: 10px; /* Space between color rows */
+        }
+        .color-row label {
+            display: inline-block; /* Keep labels inline but allow margin/padding */
+            width: auto; /* Adjust label width to content */
+            text-align: left; /* Align label text to the left */
+        }
+        .color-row input[type="text"], .color-row select {
+            margin-left: 0; /* Reset left margin for inputs/selects in rows */
+            margin-right: 15px; /* Space between input/select and the next element */
+        }
+        .mixed-color-box {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .mixed-color-visualization {
+            margin-top: 10px;
+        }
+        .input-group {
+            display: inline-block; /* Arrange input and select horizontally */
+            margin-right: 20px; /* Space between input groups */
+        }
+    </style>
+</head>
+<body>
+    <h1>Potion Game Color Mixer</h1>
+
+    <form method="post" style="text-align: center;">
+        <div class="color-row">
+            <div class="input-group">
+                <label for="color1">Color 1 (Hex Code):</label>
+                <input type="text" id="color1" name="color1" placeholder="e.g., #FF0000" required>
+            </div>
+            <div class="input-group">
+                <label for="weight1">Ingredient/Catalyst (1/2)</label>
+                <select id="weight1" name="weight1" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="color-row">
+            <div class="input-group">
+                <label for="color2">Color 2 (Hex Code):</label>
+                <input type="text" id="color2" name="color2" placeholder="e.g., #0000FF" required>
+            </div>
+            <div class="input-group">
+                <label for="weight2">Weight 2:</label>
+                <select id="weight2" name="weight2" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit">Mix Colors</button>
+    </form>
+
+    {% if mixed_color %}
+    <div class="mixed-color-box">
+        <h2>Mixed Color: <span style="color: {{ mixed_color }};">{{ mixed_color }}</span></h2>
+        {% if color_image %}
+        <div class="mixed-color-visualization">
+            <img src="{{ color_image }}" alt="Mixed Color Visualization">
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+</body>
+</html>
