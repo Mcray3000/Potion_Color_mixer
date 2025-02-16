@@ -1,5 +1,7 @@
 # Potion Brewing
 
+The current state of potion brewing
+
 ## Catalysts and Their Associated Colors
 
 | Catalyst        | Color Code |
@@ -28,27 +30,29 @@ Beginner: *require one ingredient*   
 
 | Potion | Recipe | Color Code |
 |---|---|---|
-| [[Red|Red Potion]] | Heartbeet | #E79600 |
-| [[Blue|Blue Potion]] | Slimeblob | #AB00E7 |
-| [[Green|Green Potion]] | Bones | #166060 |  
+| Red | Heartbeet | #FF0000 |
+| Blue | Slimeblob | #0000FF |
+| Green | Bones | #00FF00 |  
 
 Intermediate: *require three ingredients (2 basic potions + a catalyst)*   
 
 | Potion | Recipe | Color Code |
 |---|---|---|
-| [[Orange|Orange Potion]] | Red + Green + Sunflower | #E79600 |
-| [[Purple|Purple Potion]] | Red + Blue + Lightning Bloom | #AB00E7 |
-| [[Black|Black Potion]] | Green + Blue + Tar | #166060 |
+| Orange | Red + Green + Sunflower | #E79600 |
+| Purple | Red + Blue + Lightning Bloom | #AB00E7 |
+| Black | Green + Blue + Tar | #166060 |
 
 Advanced: *requires three ingredients (2 intermediate potions + a catalyst)*   
 
 | Potion | Recipe | Color Code |
 |---|---|---|
-| [[Gold|Gold Potion]] | Orange + Purple + Sun Drop | #EF7D55 |
-| [[Grey|Grey Potion]] | Orange + Black + Sands of Time | #8B7F6E |
-| [[Bomb!|Bomb! Potion]] | Black + Purple + Gun Powder | #614F79 |
+| Gold | Orange + Purple + Sun Drop | #EF7D55 |
+| Grey | Orange + Black + Sands of Time | #8B7F6E |
+| Bomb! | Black + Purple + Gun Powder | #614F79 |
 
 Unknown Potions: *A potion for which there is no existing recipe*
+
+> For the potions with no effect, a suggestion would be to take the RGB values and, by whatever value is greatest, have a general mundane, slightly helpful, or slightly negative effect. The effect could even hint at what a real recipe might be.
 
 ## To Test Color Mixes
 
