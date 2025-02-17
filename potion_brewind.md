@@ -52,6 +52,8 @@ Advanced: *requires three ingredients (2 intermediate potions + a catalyst)*Â  Â
 
 Unknown Potions: *A potion for which there is no existing recipe*
 
+* Currently potions crafted without following a recipie do nothing.
+
 > For the potions with no effect, a suggestion would be to take the RGB values and, by whatever value is greatest, have a general mundane, slightly helpful, or slightly negative effect. The effect could even hint at what a real recipe might be.
 
 ## To Test Color Mixes
